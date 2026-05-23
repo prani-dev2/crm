@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BDA Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>BDA Management System</h1>
+
+    <div class="cards">
+      <div class="card">
+        <h2 id="totalLeads">0</h2>
+        <p>Total Leads</p>
+      </div>
+
+      <div class="card">
+        <h2 id="interestedLeads">0</h2>
+        <p>Interested</p>
+      </div>
+
+      <div class="card">
+        <h2 id="closedLeads">0</h2>
+        <p>Closed</p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Add New Lead</h2>
+
+      <input type="text" id="name" placeholder="Client Name">
+      <input type="text" id="company" placeholder="Company Name">
+      <input type="email" id="email" placeholder="Email">
+
+      <select id="status">
+        <option value="New">New</option>
+        <option value="Interested">Interested</option>
+        <option value="Closed">Closed</option>
+      </select>
+
+      <button onclick="addLead()">Add Lead</button>
+    </div>
+
+    <div class="table-section">
+      <h2>Lead List</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="leadTableBody">
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
