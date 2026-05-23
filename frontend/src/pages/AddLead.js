@@ -23,7 +23,7 @@ function AddLead() {
   const addLead = async () => {
 
     await axios.post(
-      "http://localhost:5000/api/leads",
+     "https://crm-backend-8xv7.onrender.com/api/leads",
       formData
     );
 

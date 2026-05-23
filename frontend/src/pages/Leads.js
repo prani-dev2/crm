@@ -28,7 +28,7 @@ function Leads() {
   const fetchLeads = async () => {
 
     const res = await axios.get(
-      "http://localhost:5000/api/leads"
+    "https://crm-backend-8xv7.onrender.com/api/leads",
     );
 
     setLeads(res.data);
