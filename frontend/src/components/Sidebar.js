@@ -51,7 +51,7 @@ function Sidebar() {
           }
           >
           Team
-<         /NavLink>
+         </NavLink>
         </li>
 
         <li>
