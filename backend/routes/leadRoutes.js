@@ -13,11 +13,30 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
 
-    const lead = new Lead(req.body);
+    try {
 
-    await lead.save();
+        console.log("POST request received");
 
-    res.json(lead);
+        console.log(req.body);
+
+        const lead = new Lead(req.body);
+
+        await lead.save();
+
+        console.log("Lead saved successfully");
+
+        res.json(lead);
+
+    } catch (error) {
+
+        console.log("ERROR SAVING LEAD:");
+
+        console.log(error);
+
+        res.status(500).json({
+            message: "Error saving lead"
+        });
+    }
 });
 
 router.delete("/:id", async (req, res) => {

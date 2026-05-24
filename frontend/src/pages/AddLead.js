@@ -20,7 +20,30 @@ function AddLead() {
     });
   };
 
-  const addLead = async () => {
+ const addLead = async () => {
+
+  console.log("Button Clicked");
+
+  console.log(formData);
+
+  try {
+
+    const response = await axios.post(
+      "https://crm-backend-8xv7.onrender.com/api/leads",
+      formData
+    );
+
+    console.log(response.data);
+
+    alert("Lead Added Successfully");
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("Error Adding Lead");
+  }
+};
 
     await axios.post(
      "https://crm-backend-8xv7.onrender.com/api/leads",
