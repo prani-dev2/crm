@@ -20,45 +20,39 @@ function AddLead() {
     });
   };
 
- const addLead = async () => {
+  const addLead = async () => {
 
-  console.log("Button Clicked");
+    console.log("Button Clicked");
 
-  console.log(formData);
+    console.log(formData);
 
-  try {
+    try {
 
-    const response = await axios.post(
-      "https://crm-backend-8xv7.onrender.com/api/leads",
-      formData
-    );
+      const response = await axios.post(
+        "https://crm-backend-8xv7.onrender.com/api/leads",
+        formData
+      );
 
-    console.log(response.data);
+      console.log(response.data);
 
-    alert("Lead Added Successfully");
+      alert("Lead Added Successfully");
 
-  } catch (error) {
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        status: "New",
+        assignedTo: "Rahul Sharma"
+      });
 
-    console.log(error);
+    } catch (error) {
 
-    alert("Error Adding Lead");
-  }
-};
+      console.log("FULL ERROR:");
 
-    await axios.post(
-     "https://crm-backend-8xv7.onrender.com/api/leads",
-      formData
-    );
+      console.log(error);
 
-    alert("Lead Added Successfully");
-
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      status: "New",
-      assignedTo: "Rahul Sharma"
-    });
+      alert("Error Adding Lead");
+    }
   };
 
   return (
