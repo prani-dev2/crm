@@ -189,11 +189,20 @@ function Leads() {
                     </select>
 
                     <button
-                      className="save-btn"
-                      onClick={saveEdit}
-                    >
-                      Save
-                    </button>
+                  
+                  
+                  className="save-btn"
+                  onClick={saveEdit}
+                  >
+                       Save
+                  </button>
+
+                  <button
+                  className="cancel-btn"
+                  onClick={() => setEditingLead(null)}
+                  >
+                          Cancel
+                  </button>
 
                   </>
 
