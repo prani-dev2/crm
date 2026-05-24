@@ -28,7 +28,7 @@ function Leads() {
   const fetchLeads = async () => {
 
     const res = await axios.get(
-    "https://crm-backend-8xv7.onrender.com/api/leads",
+      "https://crm-backend-8xv7.onrender.com/api/leads"
     );
 
     setLeads(res.data);
@@ -37,7 +37,7 @@ function Leads() {
   const deleteLead = async (id) => {
 
     await axios.delete(
-      `http://localhost:5000/api/leads/${id}`
+      `https://crm-backend-8xv7.onrender.com/api/leads/${id}`
     );
 
     fetchLeads();
@@ -66,7 +66,7 @@ function Leads() {
   const saveEdit = async () => {
 
     await axios.put(
-      `http://localhost:5000/api/leads/${editingLead}`,
+      `https://crm-backend-8xv7.onrender.com/api/leads/${editingLead}`,
       editData
     );
 
