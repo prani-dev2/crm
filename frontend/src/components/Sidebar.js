@@ -6,7 +6,7 @@ function Sidebar() {
 
     <div className="sidebar">
 
-      <h2>BDA CRM</h2>
+      <h2>SalesForge CRM</h2>
 
       <ul>
 
