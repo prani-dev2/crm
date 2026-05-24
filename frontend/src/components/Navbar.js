@@ -30,13 +30,7 @@ function Navbar({
 
         </button>
 
-        <span className="nav-icon">
-          🔔
-        </span>
-
-        <span className="nav-icon">
-          👤
-        </span>
+        
 
       </div>
 
